@@ -77,4 +77,8 @@ angular.module('starter', ["ionic", "firebase"])
   $scope.closeUpdateTask = function() {
     $scope.taskModalupdate.hide();
   };
+
+  $scope.clickevent = function(task) {
+   alert(task.title);
+  }
 })

@@ -42,9 +42,9 @@
       <ion-content>
         <!-- our list and list items -->
         <ion-list>
-          <ion-item ng-repeat="task in tasks">
+          <ion-item ng-repeat="task in tasks" ng-click="clickevent(task)">
             {{task.title}}
-            <ion-option-button class="button-positive ion-star" ng-click="share(item)">
+            <ion-option-button class="button-positive ion-star" ng-click="share(task)">
             </ion-option-button>
 
             <ion-option-button class="button-info ion-compose" ng-click="edit(task, $index)">
