@@ -1,0 +1,15 @@
+<ion-view title="TODO" id="page1" class=" " ng-controller="todoCtrl">
+    <ion-content padding="true" class="has-header">
+        <ion-list id="tODO-list1" class=" ">
+            <ion-item id="tODO-list-item1" ui-sref="comments" class="  " ng-repeat="task in tasks">
+            	{{task.title}}
+            	<ion-option-button class="button-positive ion-star" ng-click="share(item)"> </ion-option-button>
+            	<ion-option-button class="button-info ion-compose" ng-controller="updateTaskCtrl" ng-click="edit(task, $index)"> </ion-option-button>
+           		<ion-option-button class="button-positive ion-trash-a" ng-controller="deleteTaskCtrl" ng-click="deleteTask(task, $index)"> </ion-option-button>
+            </ion-item>
+        </ion-list>
+        <button fab primary fab-top fab-left ng-controller="createTaskCtrl" ng-click="newTask()">
+  			Add TODO
+		</button>
+   	</ion-content>
+</ion-view>
