@@ -123,4 +123,8 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
   $scope.closedeleteTask = function() {
     $scope.taskModal.hide();
   };
+
+  $scope.clickevent = function(task) {
+   alert(task.title);
+  }
 })
